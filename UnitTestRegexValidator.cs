@@ -12,7 +12,7 @@ namespace UnitTest
 			string CellNo = "+27725462359";
 
 			//act
-			SSOLib.Helpers.RegexValidator cellNoValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.InternationalMobile);
+			Helpers.RegexValidator cellNoValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.InternationalMobile);
 
 			//assert
 			Assert.IsTrue(cellNoValidator.Validate(CellNo));
@@ -26,7 +26,7 @@ namespace UnitTest
 			string CellNo = "0725462359";
 
 			//act
-			SSOLib.Helpers.RegexValidator cellNoValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.InternationalMobile);
+			Helpers.RegexValidator cellNoValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.InternationalMobile);
 
 			//assert
 			Assert.IsTrue(cellNoValidator.Validate(CellNo));
@@ -39,7 +39,7 @@ namespace UnitTest
 			string CellNo = "abcdefghij";
 
 			//act
-			SSOLib.Helpers.RegexValidator cellNoValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.InternationalMobile);
+			Helpers.RegexValidator cellNoValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.InternationalMobile);
 
 			//assert
 			Assert.IsFalse(cellNoValidator.Validate(CellNo));
@@ -53,7 +53,7 @@ namespace UnitTest
 			string email = "name@email.com";
 
 			//act
-			SSOLib.Helpers.RegexValidator emailValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Email);
+			Helpers.RegexValidator emailValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Email);
 
 			//assert
 			Assert.IsTrue(emailValidator.Validate(email));
@@ -66,7 +66,7 @@ namespace UnitTest
 			string email = "nameemail.com";
 
 			//act
-			SSOLib.Helpers.RegexValidator emailValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Email);
+			Helpers.RegexValidator emailValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Email);
 
 			//assert
 			Assert.IsFalse(emailValidator.Validate(email));
@@ -79,7 +79,7 @@ namespace UnitTest
 			string email = "name@emailcom";
 
 			//act
-			SSOLib.Helpers.RegexValidator emailValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Email);
+			Helpers.RegexValidator emailValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Email);
 
 			//assert
 			Assert.IsFalse(emailValidator.Validate(email));
@@ -92,7 +92,7 @@ namespace UnitTest
 			string email = "name@.com";
 
 			//act
-			SSOLib.Helpers.RegexValidator emailValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Email);
+			Helpers.RegexValidator emailValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Email);
 
 			//assert
 			Assert.IsFalse(emailValidator.Validate(email));
@@ -106,7 +106,7 @@ namespace UnitTest
 			string ipaddress = "192.168.10.10";
 
 			//act
-			SSOLib.Helpers.RegexValidator ipAddressValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.IPAddress);
+			Helpers.RegexValidator ipAddressValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.IPAddress);
 
 			//assert
 			Assert.IsTrue(ipAddressValidator.Validate(ipaddress));
@@ -119,7 +119,7 @@ namespace UnitTest
 			string ipaddress = "192.16810.10";
 
 			//act
-			SSOLib.Helpers.RegexValidator ipAddressValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.IPAddress);
+			Helpers.RegexValidator ipAddressValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.IPAddress);
 
 			//assert
 			Assert.IsFalse(ipAddressValidator.Validate(ipaddress));
@@ -133,7 +133,7 @@ namespace UnitTest
 			string alpha = "abcdEFGH";
 
 			//act
-			SSOLib.Helpers.RegexValidator alphaValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.AlphaChars);
+			Helpers.RegexValidator alphaValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.AlphaChars);
 
 			//assert
 			Assert.IsTrue(alphaValidator.Validate(alpha));
@@ -146,7 +146,7 @@ namespace UnitTest
 			string alpha = "abcdEFGH1234";
 
 			//act
-			SSOLib.Helpers.RegexValidator alphaValidator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.AlphaChars);
+			Helpers.RegexValidator alphaValidator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.AlphaChars);
 
 			//assert
 			Assert.IsFalse(alphaValidator.Validate(alpha));
@@ -159,7 +159,7 @@ namespace UnitTest
 			string value = "1234567";
 
 			//act
-			SSOLib.Helpers.RegexValidator validator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Numeric);
+			Helpers.RegexValidator validator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Numeric);
 
 			//assert
 			Assert.IsTrue(validator.Validate(value));
@@ -172,7 +172,7 @@ namespace UnitTest
 			string value = "123A4567";
 
 			//act
-			SSOLib.Helpers.RegexValidator validator = new SSOLib.Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.Numeric);
+			Helpers.RegexValidator validator = new Helpers.RegexValidator(Helpers.RegexValidator.ValidationType.Numeric);
 
 			//assert
 			Assert.IsFalse(validator.Validate(value));
