@@ -24,7 +24,8 @@ namespace Helpers
 		private string ValidIPAddressRegexString = @"\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b";
 		private string ValidTrustRegexString = @"^IT[0-9]{5}[/][0-9]{4}$";
 		private string ValidCompanyRegNotRegexString = @"^IT[0-9]{5}[/][0-9]{4}$";
-		private string ValidAlphaCharString = "[a-z][A-Z]";
+		private string ValidAlphaCharRegexString = "^[a-zA-Z]+$";
+		private string ValidNumericRegexString = "^[0-9]*$";
 
 		private ValidationType validationType;
 		private bool isCustomRegularExpression = false;
@@ -79,6 +80,8 @@ namespace Helpers
 					return ValidCompanyRegNotRegexString;
 				case ValidationType.AlphaChars:
 					return ValidAlphaCharString;
+				case ValidationType.Numeric:
+					return ValidNumericRegexString;
 				default:
 					break;
 			}
