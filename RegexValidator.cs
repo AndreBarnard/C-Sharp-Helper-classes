@@ -16,7 +16,10 @@ namespace Helpers
 			IPAddress,
 			Trust,
 			CompanyRegistation,
-			AlphaChars
+			AlphaChars,
+			Numeric,
+			BitCoinAddress,
+			EthereumAddress
 		}
 
 		private string ValidInternationalMobileRegString = @"(^\+[1-9]{1}[0-9]{3,14}$)*[0-9{17}]";
@@ -27,6 +30,7 @@ namespace Helpers
 		private string ValidAlphaCharRegexString = "^[a-zA-Z]+$";
 		private string ValidNumericRegexString = "^[0-9]*$";
 		private string ValidBitcoinRegexSting = "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$";
+		private string ValidEthereumRegexSting = "^0x?[0-9a-f]{40}$";
 
 		private ValidationType validationType;
 		private bool isCustomRegularExpression = false;
@@ -85,6 +89,8 @@ namespace Helpers
 					return ValidNumericRegexString;
 				case ValidationType.BitCoinAddress:
 					return ValidBitcoinRegexSting;
+				case ValidationType.EthereumAddress:
+					return ValidEthereumRegexSting;
 				default:
 					break;
 			}
