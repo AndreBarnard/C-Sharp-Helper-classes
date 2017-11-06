@@ -26,6 +26,7 @@ namespace Helpers
 		private string ValidCompanyRegNotRegexString = @"^IT[0-9]{5}[/][0-9]{4}$";
 		private string ValidAlphaCharRegexString = "^[a-zA-Z]+$";
 		private string ValidNumericRegexString = "^[0-9]*$";
+		private string ValidBitcoinRegexSting = "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$";
 
 		private ValidationType validationType;
 		private bool isCustomRegularExpression = false;
@@ -82,6 +83,8 @@ namespace Helpers
 					return ValidAlphaCharString;
 				case ValidationType.Numeric:
 					return ValidNumericRegexString;
+				case ValidationType.BitCoinAddress:
+					return ValidBitcoinRegexSting;
 				default:
 					break;
 			}
