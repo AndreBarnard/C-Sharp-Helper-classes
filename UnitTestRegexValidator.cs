@@ -177,6 +177,19 @@ namespace UnitTest
 			//assert
 			Assert.IsFalse(validator.Validate(value));
 		}
+		
+			[TestMethod]
+		public void ValidateBitCoinAddress()
+		{
+			//arrange
+			string value = "1MzJvJNZnTZx13MLAMUPkUuyaeKtgF2PSH";
+
+			//act
+			Helpers.RegexValidator validator = new Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.BitCoinAddress);
+
+			//assert
+			Assert.IsTrue(validator.Validate(value));
+		}
 
 	}
 }
