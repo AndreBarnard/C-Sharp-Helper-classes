@@ -178,7 +178,7 @@ namespace UnitTest
 			Assert.IsFalse(validator.Validate(value));
 		}
 		
-			[TestMethod]
+		[TestMethod]
 		public void ValidateBitCoinAddress()
 		{
 			//arrange
@@ -186,6 +186,19 @@ namespace UnitTest
 
 			//act
 			Helpers.RegexValidator validator = new Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.BitCoinAddress);
+
+			//assert
+			Assert.IsTrue(validator.Validate(value));
+		}
+		
+		[TestMethod]
+		public void ValidateEthereumAddress()
+		{
+			//arrange
+			string value = "0x93a21e8a5886276fe2bae4a6499272eb5d8ce836";
+
+			//act
+			Helpers.RegexValidator validator = new Helpers.RegexValidator(SSOLib.Helpers.RegexValidator.ValidationType.EthereumAddress);
 
 			//assert
 			Assert.IsTrue(validator.Validate(value));
