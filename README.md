@@ -1,6 +1,6 @@
 # C-Helper-classes
 
-Helper classes that can be used on any of your existing projects.
+This project contains C# helper classes that can becopied into existing projects along with unit test.
 
 Donation are welcome will be adding more helper classes on a regular bases:
 
