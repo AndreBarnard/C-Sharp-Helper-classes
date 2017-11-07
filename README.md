@@ -2,6 +2,28 @@
 
 This project contains C# helper classes that can becopied into existing projects along with unit test.
 
+**********************************************************************************************************************************
+-RegexValidator.cs
+
+This helper calls has a set of existing regx validation standards that will assist with validations.
+
+List of preset regx 
+
+    InternationalMobile
+    Email
+    IPAddress
+    Trust
+    CompanyRegistation
+    AlphaChars
+    Numeric
+    BitCoinAddress
+    EthereumAddress
+
+Custom regx can be pass through the construtor.
+
+
+
+*********************************************************************************************************************************
 Donation are welcome will be adding more helper classes on a regular bases:
 
 BitCoin:  1MzJvJNZnTZx13MLAMUPkUuyaeKtgF2PSH
