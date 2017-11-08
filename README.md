@@ -5,7 +5,7 @@ This project contains C# helper classes that can becopied into existing projects
 **********************************************************************************************************************************
 -RegexValidator.cs
 
-This helper calls has a set of existing regx validation standards that will assist with validations.
+This helper class has a set of existing regx validation standards that will assist with validations.
 
 List of preset regx 
 
